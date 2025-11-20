@@ -2,7 +2,7 @@
 
 Tooplate 2142 Cloud Sync
 
-https://www.tooplate.com/view/2142-cloud-sync
+https://www.tooplate.com/view/2142-cloud-sync  
 
 */
 
@@ -15,17 +15,22 @@ https://www.tooplate.com/view/2142-cloud-sync
             box-sizing: border-box;
         }
 
-        :root {
-            --primary: #6366f1;
-            --primary-dark: #4f46e5;
-            --secondary: #10b981;
-            --background: #0f172a;
-            --surface: #1e293b;
-            --text: #e2e8f0;
-            --text-secondary: #94a3b8;
-            --accent: #f472b6;
-            --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        }
+ :root {
+    --primary: #ff8a00;
+    --primary-dark: #d36e00;
+    --secondary: #ffd59f;
+    --background: #ffffff;
+    --surface: #fff4e4;
+    --text: #1e1e1e;
+    --text-secondary: #6e6e6e;
+    --accent: #ffcd7a;
+    --gradient: linear-gradient(135deg, #ffaf4d 0%, #ff7a00 100%);
+}
+
+
+
+
+
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -233,15 +238,15 @@ https://www.tooplate.com/view/2142-cloud-sync
         }
 
         .hero-bg:nth-child(1) {
-            background-image: url('images/tooplate-cloud-sync-bg01.jpg');
+            background-image: url('images/TC.03.jpg');
         }
 
         .hero-bg:nth-child(2) {
-            background-image: url('images/tooplate-cloud-sync-bg02.jpg');
+            background-image: url('images/TC.02.jpg');
         }
 
         .hero-bg:nth-child(3) {
-            background-image: url('images/tooplate-cloud-sync-bg03.jpg');
+            background-image: url('images/TC.01.jpg');
         }
 
         @keyframes pulse {
