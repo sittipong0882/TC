@@ -4,15 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>แผนกเทคนิคคอมพิวเตอร์</title>
-<link rel="icon" type="image/jpg" href="images/pbtc.jpg">
+<link rel="icon" type="image/png" href="images/pbtc.png">
+
 <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     :root { --primary: #ff8a00; }
     body {
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         background: #000; color: #fff; overflow-x: hidden;
+        scroll-behavior: smooth;
     }
-    
+
     /* พื้นหลังเคลื่อนไหว */
     .floating-shapes {
         position: fixed; top: 0; left: 0; width: 100%; height: 100%;
@@ -50,7 +52,7 @@
     }
     .nav-links { display: flex; gap: 2rem; align-items: center; }
     .nav-links a {
-        color: #aaa; text-decoration: none; transition: color 0.3s;
+        color: #aaa; text-decoration: none; transition: 0.3s;
     }
     .nav-links a:hover { color: #fff; }
 
@@ -83,7 +85,7 @@
         padding: 10px 20px;
         text-decoration: none;
         display: block;
-        transition: background 0.2s;
+        transition: 0.2s;
     }
     .dropdown-content a:hover {
         background: rgba(255, 138, 0, 0.2);
@@ -94,13 +96,12 @@
         transform: translateY(0);
     }
 
-    /* Hero */
+    /* HERO */
     .hero {
         position: relative; width: 100vw; height: 100vh;
     }
     .hero-backgrounds {
-        position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-        z-index: 0;
+        position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0;
     }
     .hero-bg {
         position: absolute; top: 0; left: 0; width: 100%; height: 100%;
@@ -108,10 +109,40 @@
         transition: opacity 1.5s;
     }
     .hero-bg.active { opacity: 1; }
-    .hero-bg::after {
-        content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-        background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.9));
+
+    /* TEXT CENTER IN HERO */
+    .hero-center-text {
+        position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        font-size: 3.5rem;
+        font-weight: bold;
+        z-index: 10;
+        background: linear-gradient(135deg, #ffce6a, #ff8a00, #ff5e00);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 0 0 25px rgba(0,0,0,0.6);
     }
+
+    /* Section */
+    section {
+        padding: 90px 10%;
+        position: relative; z-index: 5;
+    }
+    h2 {
+        font-size: 2rem; margin-bottom: 20px; color: #ffaf4d;
+    }
+
+    /* TEACHER */
+    .teacher-img {
+        width: 180px;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 15px;
+        margin-bottom: 15px;
+    }
+
 </style>
 </head>
 <body>
@@ -122,30 +153,30 @@
     <div class="shape"></div>
 </div>
 
+<!-- NAVBAR -->
 <nav>
     <div class="nav-container">
         <div class="logo">วิทยาลัยเทคนิคเพชรบุรี</div>
         <div class="nav-links">
 
             <div class="dropdown">
-                <a class="dropbtn">หน้าอื่นๆ</a>
+                <a class="dropbtn">หน้าต่างๆ</a>
                 <div class="dropdown-content">
-                    <a href="">หน้าหลัก</a>
-                    <a href="">แผนกอิเล็กทรอนิกส์</a>
+                    <a href="#home">หน้าหลัก</a>
+                    <a href="#ET">แผนกอิเล็กทรอนิกส์</a>
                 </div>
             </div>
 
-            <a href="pricing.html">หลักสูตร</a>
-            <a href="teacher.html">อาจารย์</a>
-            <a href="about.html">เกี่ยวกับเรา</a>
-            <a href="info.html">ติดต่อ</a>
-
-
+            <a href="#course">หลักสูตร</a>
+            <a href="#teacher">อาจารย์</a>
+            <a href="#aboutus">เกี่ยวกับ</a>
+            <a href="#contact">ติดต่อ</a>
         </div>
     </div>
 </nav>
 
-<section class="hero">
+<!-- HERO -->
+<section class="hero" id="home">
     <div class="hero-backgrounds">
         <div class="hero-bg"></div>
         <div class="hero-bg"></div>
@@ -155,13 +186,112 @@
         <div class="hero-bg"></div>
         <div class="hero-bg"></div>
     </div>
+
+    <div class="hero-center-text">
+        แผนกเทคนิคคอมพิวเตอร์<br>วิทยาลัยเทคนิคเพชรบุรี
+    </div>
+</section>
+
+<section id="course">
+    <h2>หลักสูตร</h2>
+    <div class="course-card">
+            <div class="course-title">ประกาศนียบัตรวิชาชีพชั้นสูง (ปวส.)</div>
+            <div class="course-desc">
+                สำหรับผู้สำเร็จการศึกษาระดับ ม.6 เรียนรู้ด้านการประกอบและซ่อมบำรุงคอมพิวเตอร์ ระบบเครือข่าย และการพัฒนาโปรแกรม
+            </div>
+        </div>
+
+        <div class="course-card">
+            <div class="course-title">เทคนิคคอมพิวเตอร์ (สำหรับผู้สำเร็จ ปวช. หรือ ม.6)</div>
+            <div class="course-desc">
+                ปรับหลักสูตรตามมาตรฐาน สอศ. มีทั้งทฤษฎีและฝึกปฏิบัติ เช่น IoT, ระบบฝังตัว, การพัฒนาเว็บไซต์ และโครงงานนวัตกรรม
+            </div>
+        </div>
+
+        <div class="course-card">
+            <div class="course-title">โครงการฝึกงานและนวัตกรรม</div>
+            <div class="course-desc">
+                ผู้เรียนมีโอกาสฝึกงานกับสถานประกอบการจริง และทำโครงงานสิ่งประดิษฐ์หรือโปรเจกต์ด้าน IT เพื่อเตรียมเข้าสู่อุตสาหกรรม
+            </div>
+        </div>
+
+        <center>
+        </center>
+    </div>
+</section>
+
+<!-- TEACHER -->
+<section id="teacher">
+    <h2>อาจารย์ประจำแผนก</h2>
+
+    <div class="teacher-card">
+        <img src="images/surawuj.jpg" class="teacher-img" alt="รูปอาจารย์สุรวุธ">
+        <div class="teacher-name">อาจารย์สุรวุธ ทนนานนท์</div>
+        <div class="teacher-role">หัวหน้าแผนกเทคนิคคอมพิวเตอร์</div>
+    </div>
+</section>
+
+<section id="aboutus">
+    <h2>เกี่ยวกับแผนกเทคนิคคอมพิวเตอร์</h2>
+    <div class="page-container">
+        <h1>แผนกเทคนิคคอมพิวเตอร์</h1>
+        <h2>วิทยาลัยเทคนิคเพชรบุรี</h2>
+        
+        <h2>ประวัติความเป็นมา</h2>
+        <p>
+            แผนกเทคนิคคอมพิวเตอร์เปิดสอนเพื่อผลิตบุคลากรด้านไอทีที่มีทักษะตรงตามความต้องการของอุตสาหกรรมและเทคโนโลยีสมัยใหม่ เริ่มเปิดการเรียนการสอนระดับ ประกาศนียบัตรวิชาชีพชั้นสูง (ปวส.) สาขางานเทคนิคคอมพิวเตอร์ สำหรับผู้สำเร็จการศึกษาระดับ ม.6
+        </p>
+        <p>
+            ต่อมาในปี พ.ศ. 2561 มีการปรับหลักสูตรตามมาตรฐาน สอศ. เปิดสอนสาขางานเทคนิคคอมพิวเตอร์ สำหรับผู้สำเร็จการศึกษาระดับ ม.6 และ ปวช. เพื่อรองรับผู้เรียนที่สนใจด้านเทคโนโลยีสารสนเทศ
+        </p>
+
+        <h2>หลักสูตรและทักษะ</h2>
+        <p>ผู้เรียนในแผนกจะได้รับความรู้และทักษะทั้งด้านทฤษฎีและปฏิบัติ ได้แก่:</p>
+        <ul>
+            <li>การประกอบและบำรุงรักษาคอมพิวเตอร์</li>
+            <li>ระบบเครือข่ายคอมพิวเตอร์</li>
+            <li>ระบบฐานข้อมูล</li>
+            <li>การพัฒนาโปรแกรมและเว็บไซต์</li>
+            <li>ระบบฝังตัวและไมโครคอนโทรลเลอร์</li>
+            <li>IoT และเทคโนโลยีอุตสาหกรรมดิจิทัล</li>
+        </ul>
+
+        <h2>การเรียนการสอน</h2>
+        <p>
+            เน้น Learning by Doing ผ่านการทดลองจริง โครงการ นวัตกรรม สิ่งประดิษฐ์ และการฝึกงานร่วมกับสถานประกอบการ ทำให้ผู้เรียนพร้อมเข้าสู่อุตสาหกรรมหรือศึกษาต่อในระดับสูง
+        </p>
+
+        <h2>แนวทางอาชีพ</h2>
+        <p>ผู้สำเร็จการศึกษาสามารถทำงานในหลายสาขา เช่น:</p>
+        <ul>
+            <li>งานระบบคอมพิวเตอร์และเครือข่าย</li>
+            <li>งานช่างเทคนิคคอมพิวเตอร์</li>
+            <li>IT Support / System Administration</li>
+            <li>งานช่างอิเล็กทรอนิกส์และระบบสมองกล</li>
+            <li>ศึกษาต่อระดับปริญญาตรีด้านไอที วิศวกรรมคอมพิวเตอร์ หรืออิเล็กทรอนิกส์</li>
+        </ul>
+
+        <p>
+            แผนกเทคนิคคอมพิวเตอร์มุ่งมั่นพัฒนาผู้เรียนให้เป็นกำลังคนคุณภาพด้านเทคโนโลยี รองรับอุตสาหกรรมและเศรษฐกิจยุคดิจิทัล ตามวิสัยทัศน์ของวิทยาลัยเทคนิคเพชรบุรี
+        </p>
+
+        <center>
+        </center>
+    </div>
+</section>
+
+<!-- CONTACT (คืนส่วนที่หาย) -->
+<section id="contact">
+    <h2>ติดต่อแผนก</h2>
+    <p>เบอร์โทร: 032-425-432</p>
+    <p>อีเมล: petchpoom2561@gmail.com</p>
 </section>
 
 <script>
 document.addEventListener('DOMContentLoaded', () => {
     const images = [
-        'TC.01.jpg', 'TC.02.jpg', 'TC.03.jpg',
-        'TC.05.jpg', 'TC.06.jpg', 'TC.07.jpg', 'TC.08.jpg'
+        'TC.01.jpg','TC.02.jpg','TC.03.jpg',
+        'TC.05.jpg','TC.06.jpg','TC.07.jpg','TC.08.jpg'
     ];
 
     const bgs = document.querySelectorAll('.hero-bg');
