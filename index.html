@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แผนกเทคนิคคอมพิวเตอร์</title>
+    <link rel="icon" type="image/png" href="images/pbtc.png">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: "Prompt", sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        /* ---------------- NAVBAR ---------------- */
+        nav {
+            background-color: #333;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+        }
+
+        nav a:hover {
+            color: #ffcc66;
+        }
+
+        /* ---------------- HERO SECTION ---------------- */
+        .hero-section {
+            width: 100%;
+            height: 90vh;
+            background: url('images/TC.01.jpg') center/cover no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero-section h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            color: #ffe7b3;
+            background: rgba(0, 0, 0, 0.35);
+            padding: 20px 45px;
+            border-radius: 25px;
+            backdrop-filter: blur(12px);
+            text-shadow: 0 0 15px rgba(0,0,0,0.9);
+            margin: 0;
+            line-height: 1.3;
+        }
+
+        /* ---------------- CONTENT SECTION ---------------- */
+        .content {
+            padding: 40px 20px;
+            max-width: 900px;
+            margin: auto;
+            font-size: 20px;
+            line-height: 1.7;
+            color: #333;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #333;
+            margin: 40px 0 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ffcc66;
+        }
+
+        .course-card,
+        .teacher-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .course-title {
+            font-weight: bold;
+            font-size: 1.4rem;
+            color: #ff8a00;
+            margin-bottom: 10px;
+        }
+
+        .teacher-img {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-bottom: 15px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .teacher-name {
+            font-weight: bold;
+            font-size: 1.3rem;
+            color: #333;
+        }
+
+        .teacher-role {
+            color: #666;
+            font-style: italic;
+        }
+
+        ul {
+            padding-left: 30px;
+        }
+
+        ul li {
+            margin-bottom: 8px;
+        }
+
+        #contact p {
+            font-size: 1.2rem;
+            background: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        /* ---------------- ABOUT GALLERY ---------------- */
+        .about-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        .about-gallery img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .about-gallery img:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        .gallery-caption {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <a href="#home">หน้าหลัก</a>
+        <a href="https://electronics-two-ashy.vercel.app/">อิเล็กทรอนิกส์</a>
+        <a href="#course">หลักสูตร</a>
+        <a href="#teacher">อาจารย์</a>
+        <a href="#aboutus">เกี่ยวกับ</a>
+        <a href="#contact">ติดต่อ</a>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero-section" id="home">
+        <h1>แผนกเทคนิคคอมพิวเตอร์<br>วิทยาลัยเทคนิคเพชรบุรี</h1>
+    </section>
+
+    <!-- CONTENT -->
+    <div class="content">
+
+        <section id="course">
+            <h2>หลักสูตร</h2>
+            <div class="course-card">
+                <div class="course-title">ประกาศนียบัตรวิชาชีพชั้นสูง (ปวส.)</div>
+                <p>สำหรับผู้สำเร็จการศึกษาระดับ ม.6 เรียนรู้ด้านการประกอบและซ่อมบำรุงคอมพิวเตอร์ ระบบเครือข่าย และการพัฒนาโปรแกรม</p>
+            </div>
+
+            <div class="course-card">
+                <div class="course-title">เทคนิคคอมพิวเตอร์ (สำหรับผู้สำเร็จ ปวช. หรือ ม.6)</div>
+                <p>ปรับหลักสูตรตามมาตรฐาน สอศ. มีทั้งทฤษฎีและฝึกปฏิบัติ เช่น IoT, ระบบฝังตัว, การพัฒนาเว็บไซต์ และโครงงานนวัตกรรม</p>
+            </div>
+
+            <div class="course-card">
+                <div class="course-title">โครงการฝึกงานและนวัตกรรม</div>
+                <p>ผู้เรียนมีโอกาสฝึกงานกับสถานประกอบการจริง และทำโครงงานสิ่งประดิษฐ์หรือโปรเจกต์ด้าน IT เพื่อเตรียมเข้าสู่อุตสาหกรรม</p>
+            </div>
+        </section>
+
+        <section id="teacher">
+            <h2>อาจารย์ประจำแผนก</h2>
+            <div class="teacher-card">
+                <img src="images/surawuj.jpg" class="teacher-img" alt="รูปอาจารย์สุรวุธ">
+                <div class="teacher-name">อาจารย์สุรวุธ ทนนานนท์</div>
+                <div class="teacher-role">หัวหน้าแผนกเทคนิคคอมพิวเตอร์</div>
+            </div>
+        </section>
+
+        <section id="aboutus">
+            <h2>เกี่ยวกับแผนกเทคนิคคอมพิวเตอร์</h2>
+
+            <!-- เพิ่มส่วนภาพกิจกรรมและผลงาน -->
+            <h3>ภาพกิจกรรมและผลงาน</h3>
+            <div class="about-gallery">
+                <img src="images/TC.01.jpg" alt="ห้องปฏิบัติการ">
+                <img src="images/TC.02.jpg" alt="กิจกรรมนักเรียน">
+                <img src="images/TC.03.jpg" alt="การเรียนการสอน">
+                <img src="images/TC.05.jpg" alt="โครงงานนวัตกรรม">
+                <img src="images/TC.06.jpg" alt="ระบบ IoT">
+                <img src="images/TC.07.jpg" alt="การแข่งขันทักษะ">
+                <img src="images/TC.08.jpg" alt="ฝึกงานสถานประกอบการ">
+            </div>
+
+            <p><strong>ประวัติความเป็นมา</strong>  
+            แผนกเทคนิคคอมพิวเตอร์เปิดสอนเพื่อผลิตบุคลากรด้านไอทีที่มีทักษะตรงตามความต้องการของอุตสาหกรรมและเทคโนโลยีสมัยใหม่ เริ่มเปิดการเรียนการสอนระดับ ประกาศนียบัตรวิชาชีพชั้นสูง (ปวส.) สาขางานเทคนิคคอมพิวเตอร์ สำหรับผู้สำเร็จการศึกษาระดับ ม.6</p>
+
+            <p>ต่อมาในปี พ.ศ. 2561 มีการปรับหลักสูตรตามมาตรฐาน สอศ. เปิดสอนสาขางานเทคนิคคอมพิวเตอร์ สำหรับผู้สำเร็จการศึกษาระดับ ม.6 และ ปวช. เพื่อรองรับผู้เรียนที่สนใจด้านเทคโนโลยีสารสนเทศ</p>
+
+            <p><strong>หลักสูตรและทักษะ</strong>  
+            ผู้เรียนในแผนกจะได้รับความรู้และทักษะทั้งด้านทฤษฎีและปฏิบัติ ได้แก่:</p>
+            <ul>
+                <li>การประกอบและบำรุงรักษาคอมพิวเตอร์</li>
+                <li>ระบบเครือข่ายคอมพิวเตอร์</li>
+                <li>ระบบฐานข้อมูล</li>
+                <li>การพัฒนาโปรแกรมและเว็บไซต์</li>
+                <li>ระบบฝังตัวและไมโครคอนโทรลเลอร์</li>
+                <li>IoT และเทคโนโลยีอุตสาหกรรมดิจิทัล</li>
+            </ul>
+
+            <p><strong>การเรียนการสอน</strong>  
+            เน้น Learning by Doing ผ่านการทดลองจริง โครงการ นวัตกรรม สิ่งประดิษฐ์ และการฝึกงานร่วมกับสถานประกอบการ ทำให้ผู้เรียนพร้อมเข้าสู่อุตสาหกรรมหรือศึกษาต่อในระดับสูง</p>
+
+            <p><strong>แนวทางอาชีพ</strong>  
+            ผู้สำเร็จการศึกษาสามารถทำงานในหลายสาขา เช่น:</p>
+            <ul>
+                <li>งานระบบคอมพิวเตอร์และเครือข่าย</li>
+                <li>งานช่างเทคนิคคอมพิวเตอร์</li>
+                <li>IT Support / System Administration</li>
+                <li>งานช่างอิเล็กทรอนิกส์และระบบสมองกล</li>
+                <li>ศึกษาต่อระดับปริญญาตรีด้านไอที วิศวกรรมคอมพิวเตอร์ หรืออิเล็กทรอนิกส์</li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>ติดต่อแผนก</h2>
+            <p>เบอร์โทร: 032-425-432</p>
+            <p>อีเมล: petchpoom2561@gmail.com</p>
+        </section>
+
+    </div>
+
+</body>
+</html>
